@@ -3,6 +3,8 @@ import { AllTransactionFinancial } from "./AllTransactionFinancial";
 export const AdminReport = () => {
   return (
     <div>
+      <p className="text-6xl font-bold text- white my-4">Admin Report Data</p>
+
       <div className="text-center hover:scale-125 duration-300">
         <a
           className="bg-blue-500  h-10 text-center p-2 rounded-lg hover:bg-blue-700  "

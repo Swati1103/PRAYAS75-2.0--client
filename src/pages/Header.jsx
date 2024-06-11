@@ -1,12 +1,9 @@
 import logo from "../utilis/logo.gif";
 import { Link } from "react-router-dom";
 import { useAuth } from "../auth";
-import { useEffect } from "react";
 
 export const Header = () => {
   const { isLoggedIn, isLogin, user, isLoading } = useAuth();
-  useEffect(() => {
-  }, [isLoggedIn]);
 
   if (isLoading) {
     return <h1>Loading ...</h1>;
@@ -27,7 +24,7 @@ export const Header = () => {
         <ul className="flex justify-evenly m-auto p-4 font-bold w-6/12">
           {isLoggedIn && user?.isAdmin && (
             <div>
-              <li className="hover:rounded-xl  duration-200 hover:bg-slate-300 hover:scale-110 p-1">
+              <li className="hover:rounded-xl duration-200 hover:bg-slate-300 hover:scale-110 p-1">
                 <Link className="Admin" to="/admin">
                   Admin
                 </Link>
@@ -52,7 +49,6 @@ export const Header = () => {
               </li>
             </div>
           )}
-
           <div>
             <li className="hover:rounded-xl duration-200 hover:bg-slate-300 hover:scale-110 p-1">
               <Link className="About" to="/about">
@@ -75,7 +71,7 @@ export const Header = () => {
             </li>
           </div>
         </ul>
-        <ul className=" flex justify-start  font-bold">
+        <ul className="flex justify-start font-bold">
           <div className="m-2 p-2">
             {isLogin ? (
               <Link to="/logout">
@@ -94,7 +90,7 @@ export const Header = () => {
           {isLogin ? (
             <div className="m-2 p-2">
               <Link to="/donate">
-                <button className=" hover:scale-105 duration-200 border-2 rounded-3xl bg-blue-600 text-white  py-2 px-4 font">
+                <button className="hover:scale-105 duration-200 border-2 rounded-3xl bg-blue-600 text-white py-2 px-4 font">
                   Donate
                 </button>
               </Link>
@@ -102,7 +98,7 @@ export const Header = () => {
           ) : (
             <div className="m-2 p-2">
               <Link to="/register">
-                <button className=" hover:scale-105 duration-200 border-2 rounded-3xl bg-blue-600 text-white  py-2 px-4 font">
+                <button className="hover:scale-105 duration-200 border-2 rounded-3xl bg-blue-600 text-white py-2 px-4 font">
                   Register
                 </button>
               </Link>
