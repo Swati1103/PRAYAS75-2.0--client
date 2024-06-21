@@ -1,9 +1,9 @@
 export const HomeDiscription = () => {
   return (
-    <div className="m-4 bg-bgblue ">
+    <div className="m-4 pb-4">
       <div>
-        <p className="font-bold text-4xl">Who are we ?</p>
-        <p className="my-4 font-medium text-lg">
+        <p className="font-bold text-2xl md:text-4xl">Who are we ?</p>
+        <p className="my-4 font-medium md:text-lg">
           Prayas75 is a small group of like-minded members of 1975-1979 batch of
           BIT Sindri. The main charter of Prayas75 is to help engineering
           students currently studying at BIT Sindri via few initiatives such as
@@ -11,11 +11,11 @@ export const HomeDiscription = () => {
           are from diverse background. The membership is currently only open to
           engineers who studied at BIT during 1975-1979.
         </p>
-        <p className="font-bold text-4xl my-4">What we provide ?</p>
-        <p className="font-bold text-blue-600 text-2xl my-4">
+        <p className="font-bold text-2xl md:text-4xl my-4">What we provide ?</p>
+        <p className="font-bold text-blue-600 md:text-2xl my-4">
           Jubilee Batch Scholarship
         </p>
-        <p className="my-4 font-medium text-lg">
+        <p className="my-4 font-medium md:text-lg">
           Jubilee Batch Scholarship is awarded to ten second-year students, one
           from each department of engineering at BIT Sindri, who can provide
           evidence of severe financial hardships yet maintaining noteworthy

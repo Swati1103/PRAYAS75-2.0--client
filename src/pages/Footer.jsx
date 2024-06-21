@@ -6,29 +6,25 @@ import INSTA_IMG from "../utilis/instagram.png";
 export const Footer = () => {
   return (
     <div className="bg-black text-white mb-0 -mt-4">
-      <div className="flex m-4 justify-between pt-20">
-        <div className="mx-8">
-          <div className="font-bold text-2xl my-4">
+      <div className="flex m-4 justify-between pt-10">
+        <div className="md:mx-8 md:w-full">
+          <div className="font-bold text-lg md:text-2xl my-4">
             Follow us on Social Media
           </div>
-          <div className="flex justify-between w-6/12">
+          <div className="flex w-1/3 justify-between ">
             <img
               src={TWITTER_IMG}
-              className=""
-              height={15}
-              width={70}
+              className="hover:scale-125 duration-300 h-10 md:h-12 "
               alt="twitter"
             ></img>
             <img
               src={FB_IMG}
-              className=""
-              height={15}
-              width={70}
+              className="hover:scale-125 duration-300 h-10 md:h-12"
               alt="fb"
             ></img>
             <img
               src={INSTA_IMG}
-              className=""
+              className="hover:scale-125 duration-300 w-10 h-10 md:h-12  md:w-12"
               height={20}
               width={70}
               alt="insta"
@@ -40,21 +36,19 @@ export const Footer = () => {
             events
           </div>
           <div className="flex">
-            <input className="rounded-lg w-48 h-8" type="email" placeholder="Enter your email" />
+            <input className="rounded-lg w-48 h-8 p-2" type="email" placeholder="Enter your email" />
             <button className="ml-8 bg-white text-black font-bold w-32 h-8 rounded-lg">Subscribe</button>
           </div>
         </div>
-        <div>
+        <div className="hidden md:block">
           <img
-            className="mr-40 mb-4"
-            height={500}
-            width={500}
+            className="z-10 md:mr-4 md:mb-4 md:w-[70rem] md:h-[20rem]"
             src={AEROPLANE_IMG}
           ></img>
         </div>
       </div>
-      <div className="flex justify-center py-4 py-4">
-        <p className="">Copyright© 2023 Prayas75 - All Rights Reserved</p>
+      <div className="flex justify-center py-4">
+        <p className="text-center">Copyright© 2023 Prayas75 - All Rights Reserved</p>
       </div>
     </div>
   );

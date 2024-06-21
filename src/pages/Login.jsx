@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../auth";
 import { toast } from "react-toastify";
 import LOGIN_IMG from "../utilis/login.png";
@@ -65,19 +65,17 @@ export const Login = () => {
     <div className="p-4">
       <section>
         <main>
-          <div className="">
-              <div className="flex ">
+              <div className="flex md:flex-row flex-col">
                 <div className="m-4">
                   <img
                     src={LOGIN_IMG}
-                    alt="Let's fill the login form"
-                    width="600"
-                    height="700"
+                    className="md:h-full h-[20rem] mx-auto"
+                    alt="Let's fill the login form "
                   />
                 </div>
                 {/* our main registration code  */}
-                <div className="mx-10 pt-36 px-32 w-1/2">
-                  <h1 className="text-5xl font-bold underline decoration-blue-600">
+                <div className="md:mx-10 pt-8 w-full md:pt-36 px-32 md:w-1/2  ">
+                  <h1 className="text-3xl md:text-5xl font-bold underline decoration-blue-600">
                     Login Form
                   </h1>
                   <br />
@@ -105,10 +103,10 @@ export const Login = () => {
                       />
                     </div>
                     <br />
-                    <div>
+                    <div className="-mt-6">
                       <button
                         type="submit"
-                        className="bg-blue-600 font-bold text-white rounded-lg h-8 w-1/2 mx-auto"
+                        className="bg-blue-600  font-bold text-white rounded-lg h-8 w-20 md:w-1/2"
                       >
                         Login
                       </button>
@@ -116,7 +114,6 @@ export const Login = () => {
                   </form>
                 </div>
               </div>
-          </div>
         </main>
       </section>
     </div>

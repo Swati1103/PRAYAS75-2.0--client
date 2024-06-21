@@ -68,18 +68,17 @@ export const Register = () => {
       <section className="p-4">
         <main>
           <div className="section-registration">
-            <div className="flex">
+            <div className="flex md:flex-row flex-col">
               <div className="m-4">
                 <img
                   src={REG_IMG}
+                  className="md:h-full h-[20rem] mx-auto"
                   alt="a nurse with a cute look"
-                  width="600"
-                  height="700"
                 />
               </div>
               {/* our main registration code  */}
-              <div className="mx-10 pt-20 px-32 w-1/2">
-                <h1 className="text-5xl font-bold underline decoration-blue-600">Registration Form</h1>
+              <div className="md:mx-10 pt-10 md:pt-20 px-32 md:w-1/2">
+                <h1 className="text-3xl md:text-5xl font-bold underline decoration-blue-600">Registration Form</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
                   <div>
@@ -127,8 +126,10 @@ export const Register = () => {
                     />
                   </div>
                   <br />
-                  <button type="submit" className="btn btn-submit">
-                    Register Now
+                  <button type="submit" 
+                        className="bg-green-700 font-bold text-white rounded-lg h-8 w-20 md:w-1/2"
+                        >
+                    Register
                   </button>
                 </form>
               </div>

@@ -12,13 +12,8 @@ const defaultContactFormData = {
 export const ContactUs = () => {
   const [data, setData] = useState(defaultContactFormData);
   const [userData, setUserData] = useState(true);
-  //const [contact, setContact] = useState(defaultContactFormData);
   const { user, API } = useAuth();
-  // const name = useRef();
-  // const mail = useRef();
-  // const msg = useRef();
 
-  // console.log("frontend user ", user.email);
 
   if (userData && user) {
     setData({
@@ -115,14 +110,14 @@ export const ContactUs = () => {
             cols="30"
             rows="6"
           ></textarea>
-          <button className="ml-64 bg-blue-800 font-bold text-white w-2/12 h-8 rounded-3xl">
+          <button className="md:ml-64 mx-32 p-2 md:p-0  bg-blue-800 font-bold text-white md:w-2/12 w-3/12  md:h-8 rounded-3xl">
             Submit
           </button>
         </form>
       </div>
 
-      <div className="popup">
-        <button className="close-btn">&times;</button>
+      <div className="ml-4 font-serif">
+        {/* <button className="close-btn">&times;</button> */}
         <p>
           Thank you for reaching to us.
           <br />

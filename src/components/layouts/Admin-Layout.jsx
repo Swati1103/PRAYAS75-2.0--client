@@ -19,30 +19,28 @@ export const AdminLayout = () => {
     <div className="flex justify-between bg-blue-50 ">
       <div className="w-2/12 border-4 border-blue-400">
         <div className="">
-          <div className="px-8 py-4 bg-black text-white">
+          <div className="md:px-8 py-4 bg-black text-white ">
             <nav>
               <ul className="flex flex-col justify-evenly h-[600px]">
-                <li className="pl-10">
+                <li className="mx-auto">
                   <NavLink to="/admin/users">
-                    <FaUser className="text-4xl" /> Users
+                    <FaUser className="text-2xl md:text-4xl mx-auto" /> Users
                   </NavLink>
                 </li>
-                <li className="pl-10">
+                <li className="mx-auto">
                   <NavLink to="/admin/transactions">
-                    {" "}
-                    <FaMoneyCheckDollar className="text-4xl" /> Financial Transactions{" "}
+                    <FaMoneyCheckDollar className=" text-2xl md:text-4xl mx-auto" /> Financial
+                    Transactions
                   </NavLink>
                 </li>
-                <li className="pl-10">
+                <li className="mx-auto">
                   <NavLink to="/admin/report">
-                    {" "}
-                    <FaNewspaper className="text-4xl" /> Generate Report{" "}
+                    <FaNewspaper className="text-2xl md:text-4xl mx-auto" /> Generate Report
                   </NavLink>
                 </li>
-                <li className="pl-10">
+                <li className="mx-auto">
                   <NavLink to="/admin/contacts">
-                    {" "}
-                    <FaMessage className="text-4xl" /> contacts{" "}
+                    <FaMessage className="text-2xl md:text-4xl mx-auto" /> contacts
                   </NavLink>
                 </li>
               </ul>

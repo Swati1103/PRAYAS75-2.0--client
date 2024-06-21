@@ -47,51 +47,50 @@ export const AdminUsers = () => {
     getAllUsersData();
   }, []);
   return (
-    <div className="b">
-      <div className="container">
-        <p className="text-6xl font-bold text- white">Admin Users Data</p>
-      </div>
-      <div className="bg-white my-4 rounded-lg text-black">
-        <table className="w-full">
-          <thead className="">
-            <tr className="text-xl font-serif  border-b-4 border-slate-600">
-              <th className="py-2">Name</th>
-              <th className="py-2">Email</th>
-              <th className="py-2">Phone</th>
-              <th className="py-2">Update</th>
-              <th className="py-2">Delete</th>
+    <>
+      <section className="md:w-full w-[135%] -ml-14">
+        <p className="text-3xl md:text-6xl font-bold text- white my-4 text-center">
+          Admin Users Data
+        </p>
+        <div className="bg-white my-4 rounded-lg text-black w-full">
+          <div className=" text-xl font-serif  border-b-4 border-slate-600 w-full">
+            <tr className="flex justify-between px-2 md:px-4 py-2">
+              <th className="px-2 md:px-4 py-2 ">Name</th>
+              <th className="px-2 md:px-4 py-2 w-2/12 ">Email</th>
+              <th className=" md:block hidden px-2 md:px-4 py-2 md:ml-20 md:-mr-32 ">Phone</th>
+              <th className="px-2 md:px-4 py-2 md:ml-20">Edit</th>
+              <th className="px-2 md:px-4 py-2 md:-mr-5">Delete</th>
             </tr>
-          </thead>
-          <tbody>
+          </div>
+          <div>
             {users.map((curUser, index) => {
+              const { username, email, phone, message, _id } = curUser;
               return (
-                <tr className="my-4 font-mono " key={index}>
-                  <td className="px-10 py-2">{curUser.username}</td>
-                  <td className="px-10 py-2"> {curUser.email}</td>
-                  <td className="px-10 py-2">{curUser.phone}</td>
-                  <td className="p-2">
-                    <Link to={`/admin/users/${curUser._id}/edit`}>
-                      <button
-                        className="bg-blue-600 w-[6rem] text-white border-2 rounded-lg p-1"
-                      >
-                        Edit
-                      </button>
-                    </Link>
-                  </td>
-                  <td className="p-2">
-                    <button
-                      className="bg-red-600 w-[6rem] text-white border-2 rounded-lg p-1"
-                      onClick={() => deleteUser(curUser._id)}
-                    >
-                      Delete
+                <div
+                  className="flex justify-between my-4 font-mono"
+                  key={index}
+                >
+                  <p className="px-1 md:px-4 py-2 w-2/12">{username}</p>
+                  <p className="px-1 md:px-4 w-2/12 md:w-3/12 py-2">{email}</p>
+                  <p className="md:block hidden px-1 md:px-4w-2/12 text-start py-2">{phone}</p>
+                  <Link to={`/admin/users/${_id}/edit`}>
+                    <button 
+                    className="bg-blue-600 md:ml-0 ml-24 w-[3rem] md:w-[6rem] text-white border-2 rounded-lg p-1">
+                      Edit
                     </button>
-                  </td>
-                </tr>
+                  </Link>
+                  <button
+                    className="md:mr-4  h-10 my-auto bg-red-600 w-[4rem] md:w-[6rem] text-white border-2 rounded-lg p-1"
+                    onClick={() => deleteUser(_id)}
+                  >
+                    Delete
+                  </button>
+                </div>
               );
             })}
-          </tbody>
-        </table>
-      </div>
-    </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };

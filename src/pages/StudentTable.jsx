@@ -30,13 +30,13 @@ export const StudentTable = ({
     ];
 
     return (
-      <div>
-        <p className="mt-8 text-2xl font-bold text-blue-800 text-center">
+      <div className="w-full">
+        <p className="text-xl pt-4 md:text-2xl font-bold text-blue-800 text-center">
           {heading}
         </p>
-        <div className="my-2 flex justify-center">
-          <table className="my-4 border-2 border-black">
-            <thead>
+        <div className="md:p-4 md:my-2   flex justify-center ">
+          <table className="md:scale-100 scale-[85%]  md:my-4 ">
+            <thead className="">
               <tr className="text-lg border-2 border-slate-300">
                 {headers.map((header) => (
                   <th
@@ -51,14 +51,13 @@ export const StudentTable = ({
             <tbody className="font-medium  text-center">
               {transactions.map((student, index) => (
                 <tr key={index}>
-                  <td className="border-2 border-slate-300 p-2 bg-slate-100">
+                  <td className="  border-2 border-slate-300 p-2 bg-slate-100">
                     {index + 1}
                   </td>
-                  <td className="border-2 border-slate-300 p-2">
+                  <td className=" border-2 border-slate-300 p-2">
                     {student.name}
                   </td>
                   <td className="border-2 border-slate-300 p-2  bg-slate-100">
-                    {" "}
                     {student.rollno}
                   </td>
                   <td className="border-2 border-slate-300 p-2">

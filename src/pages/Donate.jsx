@@ -1,9 +1,9 @@
 export const Donate = () => {
   return (
     <div className="p-4 bg-blue-50">
-      <div className="rounded-lg shadow-xl border-2 w-1/2 mx-auto p-10">
+      <div className="rounded-lg shadow-xl border-2 md:w-1/2 mx-auto p-10">
         <div>
-          <p className="py-10 text-3xl font-bold text-center">Thank You</p>
+          <p className="py-10 text-xl md:text-3xl font-bold text-center">Thank You</p>
           <p className="font-serif py-4">
             We appreciate your thoughtfulness in helping poor deserving students
             of BIT Sindri. To proceed with the payment, kindly transfer the
@@ -21,13 +21,13 @@ export const Donate = () => {
           <p className="text-white mx-auto bg-blue-800 text-center font-bold h-10 py-2 my-4 rounded-lg w-7/12">
             Bank: ICICI BANK LIMITED
           </p>
-          <p className="text-white mx-auto bg-blue-800 text-center  font-bold h-10 py-2 my-4 rounded-lg w-7/12">
+          <p className="text-white mx-auto bg-blue-800 text-center  font-bold  py-2 my-4 rounded-lg w-7/12">
             Account Holder Name: SUJIT KUMAR MITRA
           </p>
         </div>
       </div>
 
-      <div className="rounded-lg shadow-xl border-2 w-1/2 mx-auto p-10 my-10">
+      <div className="rounded-lg shadow-xl border-2 md:w-1/2 mx-auto p-10 my-10">
         <form className="">
           <p className="font-serif py-4 text-center">
             If you encounter any issues with making payments, Please fill in the
@@ -78,7 +78,7 @@ export const Donate = () => {
             placeholder="Amount*"
             required
           />
-          <button className="mx-[15rem] h-10 bg-blue-800 font-bold text-white w-3/12 rounded-3xl">
+          <button className="md:mx-[15rem] mx-[10rem] h-12 md:h-10 bg-blue-800 font-bold text-white md:w-3/12 w-4/12 rounded-3xl">
             Send Message
           </button>
         </form>
