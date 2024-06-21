@@ -58,10 +58,10 @@ export const AdminContacts = () => {
         <div className="bg-white my-4 rounded-lg text-black w-full">
           <div className=" text-xl font-serif  border-b-4 border-slate-600 w-full">
             <tr className="flex justify-between px-2 md:px-4 py-2">
-              <th className="px-2 md:px-4 py-2">Name</th>
-              <th className="px-2 md:px-4 py-2">Email</th>
-              <th className="px-2 md:px-4 py-2">Message</th>
-              <th className="px-2 md:px-4 py-2">Delete</th>
+              <th className="px-1 md:px-4 py-2 w-2/12">Name</th>
+              <th className="px-1 md:px-4 py-2 w-3/12">Email</th>
+              <th className="px-1 md:px-4 py-2 w-5/12">Message</th>
+              <th className="px-1 md:px-4 py-2 w-2/12">Delete</th>
             </tr>
           </div>
           <div>
@@ -73,13 +73,13 @@ export const AdminContacts = () => {
                   key={index}
                 >
                   <p className="px-1 md:px-4 py-2 w-2/12">{username}</p>
-                  <p className="px-2 md:px-4  w-4/12 py-2">{email}</p>
-                  {phone && (
+                  <p className="px-2 md:px-4  w-3/12 py-2 break-words">{email}</p>
+                  {/* {phone && (
                     <p className="px-2 md:px-4  w-2/12 py-2">{phone}</p>
-                  )}
-                  <p className="px-2 md:px-4  w-4/12  py-2">{message}</p>
+                  )} */}
+                  <p className="px-2 md:px-4  w-5/12  py-2">{message}</p>
                   <button
-                    className="mr-4  h-10 my-auto bg-red-600 w-[6rem] text-white border-2 rounded-lg p-1"
+                    className="md:mr-4 w-2/12 mr-0  h-10 my-auto bg-red-600 md:w-[6rem] text-white border-2 rounded-lg p-1"
                     onClick={() => deleteContactById(_id)}
                   >
                     Delete

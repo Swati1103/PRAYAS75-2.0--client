@@ -14,7 +14,7 @@ export const AdminReport = () => {
           <button className="mt-10 md:my-4">Print Report</button>
         </a>
       </div>
-      <div className="md:mb-0 bg-inherit text-blue-800 md:scale-100 md:w-full w-[25rem] md:-ml-0 ml-2  scale-[82%] bg-slate-200 md:mt-0">
+      <div className="md:mb-0 bg-transparent text-blue-800 md:scale-100 md:w-full w-[25rem] md:-ml-0 ml-2  scale-[82%] bg-slate-200 md:mt-0">
         <AllTransactionFinancial />
       </div>
     </div>

@@ -64,7 +64,7 @@ export const AdminUsers = () => {
           </div>
           <div>
             {users.map((curUser, index) => {
-              const { username, email, phone, message, _id } = curUser;
+              const { username, email, phone,  _id } = curUser;
               return (
                 <div
                   className="flex justify-between my-4 font-mono"
