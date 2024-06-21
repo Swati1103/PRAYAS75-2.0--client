@@ -16,7 +16,7 @@ export const AdminLayout = () => {
   }
 
   return (
-    <div className="flex md:flex-row flex-col justify-between bg-blue-50 ">
+    <div className="flex md:flex-row flex-col justify-between bg-blue-50 z-10">
       <div className="md:w-2/12 w-full border-4 border-blue-400">
         <div className="">
           <div className="md:px-8 py-4 bg-black text-white ">
@@ -30,14 +30,14 @@ export const AdminLayout = () => {
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/transactions">
-                    <FaMoneyCheckDollar className="text-2xl md:text-4xl md:mx-auto" />{" "}
-                    <p className=" md:w-full w-4/12">Financial Transactions</p>
+                    <FaMoneyCheckDollar className="text-2xl md:text-4xl mx-12 md:mx-auto" />{" "}
+                    <p className=" md:w-full w-10/12  text-center">Financial Transactions</p>
                   </NavLink>
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/report">
-                    <FaNewspaper className="text-2xl md:text-4xl   md:mx-auto" />
-                    <p className="md:w-full w-4/12">Generate Report</p>
+                    <FaNewspaper className="text-2xl md:text-4xl mx-6 md:mx-auto" />
+                    <p className="md:w-full w-10/12 md:ml-0 md:px-0 ml-2 px-2">Generate Report</p>
                   </NavLink>
                 </li>
                 <li className="mx-auto">

@@ -11,10 +11,10 @@ export const AdminReport = () => {
           href={Jubilee_Batch_Scholarship}
           download="Scholarship Report"
         >
-          <button className="mt-10 md:my-4">Print Report</button>
+          <button className="mt-10 md:my-4 z-50">Print Report</button>
         </a>
       </div>
-      <div className="md:mb-0 bg-transparent text-blue-800 md:scale-100 md:w-full w-[25rem] md:-ml-0 ml-2  scale-[82%] bg-slate-200 md:mt-0">
+      <div className="md:mb-0 bg-transparent overflow-y-hidden text-blue-800 md:scale-100 md:w-full w-[25rem] md:ml-10 mx-1  bg-slate-200 md:mt-0">
         <AllTransactionFinancial />
       </div>
     </div>

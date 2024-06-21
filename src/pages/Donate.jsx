@@ -12,13 +12,13 @@ export const Donate = () => {
           <p className="py-4 text-center font-medium text-lg underline">
             Organization Account Details
           </p>
-          <p className="text-white mx-auto bg-blue-800 text-center font-bold h-10 py-2 my-4 rounded-lg w-7/12">
+          <p className="text-white mx-auto bg-blue-800 text-center font-bold  py-2 my-4 rounded-lg w-7/12">
             Account Number: 242601000895
           </p>
-          <p className="text-white mx-auto bg-blue-800 text-center font-bold h-10 py-2 my-4 rounded-lg w-7/12">
+          <p className="text-white mx-auto bg-blue-800 text-center font-bold  py-2 my-4 rounded-lg w-7/12">
             IFSC Code: ICIC0002426
           </p>
-          <p className="text-white mx-auto bg-blue-800 text-center font-bold h-10 py-2 my-4 rounded-lg w-7/12">
+          <p className="text-white mx-auto bg-blue-800 text-center font-bold  py-2 my-4 rounded-lg w-7/12">
             Bank: ICICI BANK LIMITED
           </p>
           <p className="text-white mx-auto bg-blue-800 text-center  font-bold  py-2 my-4 rounded-lg w-7/12">
