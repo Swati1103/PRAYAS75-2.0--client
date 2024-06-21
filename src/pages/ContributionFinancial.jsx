@@ -11,7 +11,7 @@ export const ContributionFinancial = () => {
   ).members;
 
   return (
-    <div>
+    <div className="bg-blue-50  md:mx-auto scale-75 md:scale-100 md:mt-0 -mt-[30rem]">
       <Contributors
         transactions={foundingMembers}
         selectedCurrency={"Rs"}

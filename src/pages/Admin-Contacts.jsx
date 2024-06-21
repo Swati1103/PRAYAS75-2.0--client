@@ -51,7 +51,7 @@ export const AdminContacts = () => {
 
   return (
     <>
-      <section className="md:w-full w-[135%] -ml-14">
+      <section className="md:w-full w-[140%] -ml-14">
         <p className="text-3xl md:text-6xl font-bold text- white my-4 text-center">
           Admin Contact Data
         </p>

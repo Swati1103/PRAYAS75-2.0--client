@@ -30,12 +30,12 @@ export const StudentTable = ({
     ];
 
     return (
-      <div className="w-full">
-        <p className="text-xl pt-4 md:text-2xl font-bold text-blue-800 text-center">
+      <div className="md:w-[100%] w-[130%] md:mt-0 mt-40 md:ml-0 -ml-16 md:my-10 ">
+        <p className="text-2xl md:pt-4 mb-10 md:text-2xl font-bold text-blue-800 text-center">
           {heading}
         </p>
-        <div className="md:p-4 md:my-2   flex justify-center ">
-          <table className="md:scale-100 scale-[85%]  md:my-4 ">
+        <div className="md:p-4 md:my-2 flex justify-center ">
+          <table className="md:scale-100  md:my-4 ">
             <thead className="">
               <tr className="text-lg border-2 border-slate-300">
                 {headers.map((header) => (
@@ -54,19 +54,19 @@ export const StudentTable = ({
                   <td className="  border-2 border-slate-300 p-2 bg-slate-100">
                     {index + 1}
                   </td>
-                  <td className=" border-2 border-slate-300 p-2">
+                  <td className=" border-2 border-slate-300 p-2 bg-blue-100">
                     {student.name}
                   </td>
                   <td className="border-2 border-slate-300 p-2  bg-slate-100">
                     {student.rollno}
                   </td>
-                  <td className="border-2 border-slate-300 p-2">
+                  <td className="border-2 border-slate-300 p-2  bg-blue-100">
                     {student.branch}
                   </td>
                   <td className="border-2 border-slate-300 p-2  bg-slate-100">
                     {formatCurrency(student.syr)}
                   </td>
-                  <td className="border-2 border-slate-300 p-2">
+                  <td className="border-2 border-slate-300 p-2  bg-blue-100">
                     {formatCurrency(student.tyr)}
                   </td>
                   <td className="border-2 border-slate-300 p-2  bg-slate-100">

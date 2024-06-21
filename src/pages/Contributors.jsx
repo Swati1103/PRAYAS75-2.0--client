@@ -29,13 +29,13 @@ export const Contributors = ({
     ];
 
     return (
-      <div>
-        <p className="mt-8 text-2xl font-bold text-blue-800 text-center">
+      <div className="md:w-[100%] w-[130%] md:mt-0 mt-40 md:ml-0 -ml-16 md:my-10 ">
+        <p className=" text-xl pt-4 md:text-2xl font-bold text-blue-800 text-center">
           {heading}
         </p>
-        <div className="my-2 flex justify-center">
-          <table className="my-4 border-2 border-black">
-            <thead>
+        <div className="md:p-4 md:my-2 flex justify-center ">
+          <table className="md:scale-100 scale-[90%]  md:my-4 ">
+            <thead className="">
               <tr className="text-lg border-2 border-slate-300">
                 {headers?.map((header) => (
                   <th

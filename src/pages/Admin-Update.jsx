@@ -78,9 +78,9 @@ export const AdminUpdate = () => {
     }
   };
   return (
-    <section className="section-contact">
+    <section className="section-contact -ml-12 md:ml-0">
       <div className="contact-content container">
-        <p className="text-6xl font-bold text- white">Update User Data</p>
+        <p className="text-3xl md:text-6xl font-bold text- white">Update User Data</p>
       </div>
       {/* contact page main  */}
       <div className="">
@@ -134,17 +134,16 @@ export const AdminUpdate = () => {
                 required
               />
             </div>
-
-            <div className="pt-4 ">
+            <div className="pt-4">
               <span className="pt-10 pb-2 text-lg">User Level : </span>
-              <div className="flex">
-                <div className="form-control ">
+              <div className="flex ">
+                <div className="form-control  -mx-2 md:mx-0">
                   <label className="label cursor-pointer  text-white pt-10 pb-2 text-lg">
                     Admin
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio span mx-2 bg-white checked:bg-red-500"
+                      className="radio span mx-1 md:mx-2 bg-white checked:bg-red-500"
                       checked={isAdmin}
                       onChange={() => {
                         setIsGold(false)
@@ -153,13 +152,13 @@ export const AdminUpdate = () => {
                       }}                    />
                   </label>
                 </div>
-                <div className="form-control mx-8">
+                <div className="form-control  mx-2 md:mx-8">
                   <label className="label cursor-pointer  text-white pt-10 pb-2 text-lg">
                     Gold
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio mx-2 bg-white  checked:bg-yellow-500"
+                      className="radio mx-1 md:mx-2 bg-white  checked:bg-yellow-500"
                       checked={isGold}
                       onChange={() => {
                         setIsGold(true)
@@ -169,13 +168,13 @@ export const AdminUpdate = () => {
                     />
                   </label>
                 </div>
-                <div className="form-control">
+                <div className="form-control -mx-2 md:mx-0">
                   <label className="label mx-8 cursor-pointer  text-white pt-10 pb-2 text-lg">
                     Blue
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio mx-2 bg-white checked:bg-blue-500"
+                      className="radio mx-1 md:mx-2 bg-white checked:bg-blue-500"
                       checked={isBlue}
                       onChange={() => {
                         setIsGold(false)
@@ -190,7 +189,7 @@ export const AdminUpdate = () => {
                     <input
                       type="radio"
                       name="radio-10"
-                      className="radio span mx-2 bg-white checked:bg-slate-400"
+                      className="radio span mx-1 md:mx-2 bg-white checked:bg-slate-400"
                       checked={!isAdmin && !isBlue && !isGold}
                       onChange={() => {
                         setIsGold(false)

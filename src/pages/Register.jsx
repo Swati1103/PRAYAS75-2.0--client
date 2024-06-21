@@ -77,7 +77,7 @@ export const Register = () => {
                 />
               </div>
               {/* our main registration code  */}
-              <div className="md:mx-10 pt-10 md:pt-20 px-32 md:w-1/2">
+              <div className="md:mx-10 pt-10 md:pt-20 px-10 md:px-32 md:w-1/2">
                 <h1 className="text-3xl md:text-5xl font-bold underline decoration-blue-600">Registration Form</h1>
                 <br />
                 <form onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ export const Register = () => {
                       value={user.username}
                       onChange={handleInput}
                       className="p-2 my-4 w-full border-2 border-black rounded-lg"
-                      placeholder="username"
+                      placeholder="Username"
                     />
                   </div>
                   <div>
@@ -99,7 +99,7 @@ export const Register = () => {
                       name="email"
                       value={user.email}
                       onChange={handleInput}
-                      placeholder="email"
+                      placeholder="Email"
                       className="p-2 my-4 w-full border-2 border-black rounded-lg"
                     />
                   </div>
@@ -110,6 +110,7 @@ export const Register = () => {
                       name="phone"
                       value={user.phone}
                       onChange={handleInput}
+                      placeholder="Phone Number"
                       className="p-2 my-4 w-full border-2 border-black rounded-lg"
 
                     />
@@ -121,7 +122,7 @@ export const Register = () => {
                       name="password"
                       value={user.password}
                       onChange={handleInput}
-                      placeholder="password"
+                      placeholder="Password"
                       className="p-2 my-4 w-full border-2 border-black rounded-lg"
                     />
                   </div>

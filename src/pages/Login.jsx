@@ -74,10 +74,10 @@ export const Login = () => {
                   />
                 </div>
                 {/* our main registration code  */}
-                <div className="md:mx-10 pt-8 w-full md:pt-36 px-32 md:w-1/2  ">
-                  <h1 className="text-3xl md:text-5xl font-bold underline decoration-blue-600">
+                <div className="md:mx-10 pt-8 w-full  md:pt-36 px-10 md:px-32 md:w-1/2  ">
+                  <p className="text-3xl md:text-5xl font-bold underline decoration-blue-600">
                     Login Form
-                  </h1>
+                  </p>
                   <br />
                   <form onSubmit={handleSubmit}>
                     <div>

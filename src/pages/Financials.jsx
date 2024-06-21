@@ -12,11 +12,11 @@ export const Financials = () => {
   const [activeComponent, setActiveComponent] = useState("AllTransaction");
 
   return (
-    <div>
+    <div className="bg-blue-50 ">
       {isLoading ? (
         <h1>Loading</h1>
       ) : (
-        <div>
+        <div className="md:-mb-10 -mb-96">
           <FinancialOptions
             setSelectedCurrency={setSelectedCurrency}
             setActiveComponent={setActiveComponent}

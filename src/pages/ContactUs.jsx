@@ -110,7 +110,7 @@ export const ContactUs = () => {
             cols="30"
             rows="6"
           ></textarea>
-          <button className="md:ml-64 mx-32 p-2 md:p-0  bg-blue-800 font-bold text-white md:w-2/12 w-3/12  md:h-8 rounded-3xl">
+          <button className="md:ml-64 mx-32 p-2 md:p-0  bg-blue-800 font-bold text-white md:w-2/12 w-4/12  md:h-8 rounded-3xl">
             Submit
           </button>
         </form>

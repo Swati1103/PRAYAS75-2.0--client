@@ -48,7 +48,7 @@ export const AdminUsers = () => {
   }, []);
   return (
     <>
-      <section className="md:w-full w-[135%] -ml-14">
+      <section className="md:w-full w-[142%] -ml-14">
         <p className="text-3xl md:text-6xl font-bold text- white my-4 text-center">
           Admin Users Data
         </p>

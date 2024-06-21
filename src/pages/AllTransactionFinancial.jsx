@@ -18,7 +18,7 @@ export const AllTransactionFinancial = ({ selectedCurrency = "Rs", usdValue=80 }
   const { batch19, batch20, batch21 } = splitTransactions(yourTransactions);
 
   return (
-    <div className="bg-blue-50 w-[135%] md:w-full md:ml-0 -ml-[72px]">
+    <div className="bg-inherit  md:mx-auto scale-[65%] md:scale-100 md:mt-0 -mt-[40rem]">
       <StudentTable
         transactions={batch19}
         selectedCurrency={selectedCurrency}

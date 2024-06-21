@@ -7,12 +7,12 @@ import ANKIT_IMG from "../utilis/Ankit Kumar.jpeg";
 export const About = () => {
   return (
     <div className=" bg-blue-50 md:block flex flex-col justify-evenly">
-      <div className="py-10 mx-2">
+      <div className="py-10 mx-2 ">
         <p className="text-center mb-[4rem] text-4xl md:text-6xl font-bold text-blue-600 ">
           ABOUT US
         </p>
-        <div className="flex md:flex-row flex-col  ">
-          <div className="md:w-5/12 group my-10">
+        <div className="flex md:flex-row flex-col">
+          <div className="md:w-5/12 group md:my-10 my-20">
             <div className="hover:scale-110 pb-20 duration-300 group-hover:bg-blue-600 group-hover:text-white border-2 bg-slate-200 mx-10 rounded-xl  p-2 h-full">
               <img
                 src={MISSION_IMG}
@@ -27,7 +27,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="md:w-5/12 group my-10">
+          <div className="md:w-5/12 group  md:my-10 my-20">
           <div className="hover:scale-110 pb-20 duration-300 group-hover:bg-blue-600 group-hover:text-white border-2 bg-slate-200 mx-10 rounded-xl  p-2 h-full">
           <img
                 src={VISION_IMG}
@@ -43,7 +43,7 @@ export const About = () => {
               </p>
             </div>
           </div>
-          <div className="md:w-5/12 group my-10">
+          <div className="md:w-5/12 group  md:my-10 my-20">
           <div className="hover:scale-110 pb-20 duration-300 group-hover:bg-blue-600 group-hover:text-white border-2 bg-slate-200 mx-10 rounded-xl  p-2 h-full">
           <img
                 src={ACHIEVEMENT_IMG}

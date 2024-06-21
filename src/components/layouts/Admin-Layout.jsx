@@ -16,31 +16,34 @@ export const AdminLayout = () => {
   }
 
   return (
-    <div className="flex justify-between bg-blue-50 ">
-      <div className="w-2/12 border-4 border-blue-400">
+    <div className="flex md:flex-row flex-col justify-between bg-blue-50 ">
+      <div className="md:w-2/12 w-full border-4 border-blue-400">
         <div className="">
           <div className="md:px-8 py-4 bg-black text-white ">
             <nav>
-              <ul className="flex flex-col justify-evenly h-[600px]">
+              <ul className="flex md:flex-col flex-row justify-evenly md:h-[600px]">
                 <li className="mx-auto">
                   <NavLink to="/admin/users">
-                    <FaUser className="text-2xl md:text-4xl mx-auto" /> Users
+                    <FaUser className="text-2xl md:text-4xl mx-auto" />
+                    <p className="md:w-full w-3/12">Users</p>
                   </NavLink>
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/transactions">
-                    <FaMoneyCheckDollar className=" text-2xl md:text-4xl mx-auto" /> Financial
-                    Transactions
+                    <FaMoneyCheckDollar className="text-2xl md:text-4xl md:mx-auto" />{" "}
+                    <p className=" md:w-full w-4/12">Financial Transactions</p>
                   </NavLink>
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/report">
-                    <FaNewspaper className="text-2xl md:text-4xl mx-auto" /> Generate Report
+                    <FaNewspaper className="text-2xl md:text-4xl   md:mx-auto" />
+                    <p className="md:w-full w-4/12">Generate Report</p>
                   </NavLink>
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/contacts">
-                    <FaMessage className="text-2xl md:text-4xl mx-auto" /> contacts
+                    <FaMessage className="text-2xl md:text-4xl mx-auto" />{" "}
+                    contacts
                   </NavLink>
                 </li>
               </ul>
@@ -48,7 +51,7 @@ export const AdminLayout = () => {
           </div>
         </div>
       </div>
-      <div className="w-10/12 px-16 bg-black  py-10 text-white border-4 border-blue-400">
+      <div className="md:w-10/12 px-16 bg-black  py-10 text-white border-4 border-blue-400">
         <Outlet />
       </div>
     </div>
