@@ -36,7 +36,7 @@ export const AdminContacts = () => {
       });
       if (response.ok) {
         getContactsData();
-        toast.success("deleted successfully");
+        toast.success("Deleted Successfully");
       } else {
         toast.error("Not Deleted");
       }
@@ -50,46 +50,66 @@ export const AdminContacts = () => {
   }, []);
 
   return (
-    <>
-      <section className="md:w-full w-[140%] -ml-14">
+    <div className="overflow-x-auto">
+      <section className="w-full overflow-x-auto">
         <p className="text-3xl md:text-6xl font-bold text- white my-4 text-center">
           Admin Contact Data
         </p>
-        <div className="bg-white my-4 rounded-lg text-black w-full">
-          <div className=" text-xl font-serif  border-b-4 border-slate-600 w-full">
-            <tr className="flex justify-between px-2 md:px-4 py-2">
-              <th className="px-1 md:px-4 py-2 w-2/12">Name</th>
-              <th className="px-1 md:px-4 py-2 w-3/12">Email</th>
-              <th className="px-1 md:px-4 py-2 w-5/12">Message</th>
-              <th className="px-1 md:px-4 py-2 w-2/12">Delete</th>
+        {/* NEW */}
+        <div className="w-full ">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg  ">
+        <table className="w-full text-sm  rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-lg text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                NAME
+              </th>
+              <th scope="col" className="px-6 py-3">
+                MOBILE NO.
+              </th>
+              <th scope="col" className="px-6 py-3">
+                EMAIL
+              </th>
+              <th scope="col" className="px-6 py-3">
+                MESSAGE
+              </th>
+              <th scope="col" className="px-6 py-3">
+                DELETE
+              </th>
             </tr>
-          </div>
-          <div>
+          </thead>
+          <tbody>
             {contactData.map((curContactData, index) => {
-              const { username, email, phone, message, _id } = curContactData;
               return (
-                <div
-                  className="flex justify-between my-4 font-mono"
+                <tr
                   key={index}
+                  className="bg-white border-b hover:bg-blue-100 dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <p className="px-1 md:px-4 py-2 w-2/12">{username}</p>
-                  <p className="px-2 md:px-4  w-3/12 py-2 break-words">{email}</p>
-                  {/* {phone && (
-                    <p className="px-2 md:px-4  w-2/12 py-2">{phone}</p>
-                  )} */}
-                  <p className="px-2 md:px-4  w-5/12  py-2">{message}</p>
-                  <button
-                    className="md:mr-4 w-2/12 mr-0  h-10 my-auto bg-red-600 md:w-[6rem] text-white border-2 rounded-lg p-1"
-                    onClick={() => deleteContactById(_id)}
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   >
-                    Delete
-                  </button>
-                </div>
+                    {curContactData?.username}
+                  </th>
+                  <td className="px-6 py-4">{curContactData?.phone}</td>
+                  <td className="px-6 py-4">{curContactData?.email}</td>
+                  <td className="px-6 py-4">{curContactData?.message}</td>
+                  <td className="px-6 py-4">
+                    <button
+                      onClick={() => deleteContactById(curContactData?._id)}
+                      className="font-medium  text-red-600 dark:text-red-500 hover:underline"
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
               );
             })}
-          </div>
-        </div>
+          </tbody>
+        </table>
+      </div>
+    </div>
       </section>
-    </>
+    </div>
   );
 };

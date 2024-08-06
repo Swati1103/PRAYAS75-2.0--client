@@ -42,8 +42,8 @@ export const AdminLayout = () => {
                 </li>
                 <li className="mx-auto">
                   <NavLink to="/admin/contacts">
-                    <FaMessage className="text-2xl md:text-4xl mx-auto" />{" "}
-                    contacts
+                    <FaMessage className="text-2xl md:text-4xl mx-auto" />
+                    Contacts
                   </NavLink>
                 </li>
               </ul>
@@ -51,7 +51,7 @@ export const AdminLayout = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-10/12 px-16 bg-black  py-10 text-white border-4 border-blue-400">
+      <div className="w-full  md:px-16 px-2 bg-black  md:py-10 py-5 text-white border-4 border-blue-400">
         <Outlet />
       </div>
     </div>

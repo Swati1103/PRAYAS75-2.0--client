@@ -47,50 +47,70 @@ export const AdminUsers = () => {
     getAllUsersData();
   }, []);
   return (
-    <>
-      <section className="md:w-full w-[142%] -ml-14">
-        <p className="text-3xl md:text-6xl font-bold text- white my-4 text-center">
+    <div className="">
+      <section className="w-full">
+        <p className="text-2xl  md:text-6xl font-bold w-full white my-4  text-center">
           Admin Users Data
         </p>
-        <div className="bg-white my-4 rounded-lg text-black w-full">
-          <div className=" text-xl font-serif  border-b-4 border-slate-600 w-full">
-            <tr className="flex justify-between px-2 md:px-4 py-2">
-              <th className="px-2 md:px-4 py-2 ">Name</th>
-              <th className="px-2 md:px-4 py-2 w-2/12 ">Email</th>
-              <th className=" md:block hidden px-2 md:px-4 py-2 md:ml-20 md:-mr-32 ">Phone</th>
-              <th className="px-2 md:px-4 py-2 md:ml-20">Edit</th>
-              <th className="px-2 md:px-4 py-2 md:-mr-5">Delete</th>
-            </tr>
-          </div>
-          <div>
-            {users.map((curUser, index) => {
-              const { username, email, phone,  _id } = curUser;
-              return (
-                <div
-                  className="flex justify-between my-4 font-mono"
-                  key={index}
-                >
-                  <p className="px-1 md:px-4 py-2 w-2/12">{username}</p>
-                  <p className="px-1 md:px-4 w-2/12 md:w-3/12 py-2">{email}</p>
-                  <p className="md:block hidden px-1 md:px-4w-2/12 text-start py-2">{phone}</p>
-                  <Link to={`/admin/users/${_id}/edit`}>
-                    <button 
-                    className="bg-blue-600 md:ml-0 ml-24 w-[3rem] md:w-[6rem] text-white border-2 rounded-lg p-1">
-                      Edit
-                    </button>
-                  </Link>
-                  <button
-                    className="md:mr-4  h-10 my-auto bg-red-600 w-[4rem] md:w-[6rem] text-white border-2 rounded-lg p-1"
-                    onClick={() => deleteUser(_id)}
+        <div className="relative w-full overflow-x-scroll shadow-md sm:rounded-lg">
+          <table className="w-full text-sm   text-left rtl:text-right text-gray-500 dark:text-gray-400">
+            <thead className="text-lg w-full text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+              <tr>
+                <th scope="col" className="px-6 py-3">
+                  NAME
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  EMAIL
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  MOBILE NO.
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  EDIT
+                </th>
+                <th scope="col" className="px-6 py-3">
+                  DELETE
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((curUser, index) => {
+                return (
+                  <tr
+                    key={index}
+                    className="bg-white border-b hover:bg-slate-200 dark:bg-gray-800 dark:border-gray-700"
                   >
-                    Delete
-                  </button>
-                </div>
-              );
-            })}
-          </div>
+                    <th
+                      scope="row"
+                      className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      {curUser?.username}
+                    </th>
+                    <td className="px-6 py-4">{curUser?.email}</td>
+                    <td className="px-6 py-4">{curUser?.phone}</td>
+                    <td className="px-6 py-4 ">
+                      <Link
+                        to={`/admin/users/${curUser._id}/edit`}
+                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                      >
+                        Edit
+                      </Link>
+                    </td>
+                    <td className="px-6 py-4">
+                      <button
+                        onClick={() => deleteUser(curUser._id)}
+                        className="font-medium  text-red-600 dark:text-red-500 hover:underline"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </section>
-    </>
+    </div>
   );
 };

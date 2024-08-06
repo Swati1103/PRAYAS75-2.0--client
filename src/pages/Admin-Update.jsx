@@ -78,7 +78,7 @@ export const AdminUpdate = () => {
     }
   };
   return (
-    <section className="section-contact -ml-12 md:ml-0">
+    <section className="section-contact ">
       <div className="contact-content container">
         <p className="text-3xl md:text-6xl font-bold text- white">Update User Data</p>
       </div>
