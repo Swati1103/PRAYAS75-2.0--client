@@ -5,7 +5,7 @@ export const useUSDValue = () => {
   const [isLoading, setIsLoading] = useState(true); // Start loading initially
   const [error, setError] = useState(null);
 
-  const apiKey = "427fd7f1ccfb074390d5";
+  const apiKey = "f1afbb6040e8a0a980a2";
 
   useEffect(() => {
     const fetchData = async () => {
